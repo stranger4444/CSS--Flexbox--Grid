@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Демонстрація CSS, Flexbox та Grid</title>
+  <style>
+    /* === Загальні стилі === */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    /* === FLEXBOX: шапка сайту === */
+    header {
+      background-color: #007bff;
+      color: white;
+      display: flex;               
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* === GRID: основний вміст сторінки === */
+    main {
+      display: grid;               
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      text-align: center;
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- === FLEXBOX: шапка сайту === -->
+  <header>
+    <div class="logo">Мій сайт</div>
+    <nav>
+      <a href="#">Головна</a>
+      <a href="#">Про мене</a>
+      <a href="#">Контакти</a>
+    </nav>
+  </header>
+
+  <h1>Демонстрація CSS, Flexbox та Grid</h1>
+
+  <!-- === GRID: основний контент === -->
+  <main>
+    <div class="card">
+      <h2>CSS</h2>
+      <p>CSS використовується для стилізації елементів сторінки — кольори, шрифти, відступи та інше.</p>
+    </div>
+    <div class="card">
+      <h2>Flexbox</h2>
+      <p>Flexbox допомагає розміщувати елементи в ряд або колонку та автоматично вирівнювати їх.</p>
+    </div>
+    <div class="card">
+      <h2>Grid</h2>
+      <p>CSS Grid дозволяє створювати складні макети у вигляді сіток — дуже зручно для основного контенту сторінки.</p>
+    </div>
+  </main>
+</body>
+</html>
